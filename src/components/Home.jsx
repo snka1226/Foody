@@ -22,7 +22,7 @@ import { Link } from 'react-router-dom';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-// import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from '@mui/icons-material/Logout';
 import logo from '../image/Logo.png'
 
 const drawerWidth = 240;
@@ -121,12 +121,12 @@ export default function PersistentDrawerLeft() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Захиалга', 'График', 'Меню',].map((text, index) => (
+                    {['Захиалга', 'График', 'Меню', 'Гарах'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
                                     {/* {index % 2 === 0 ? <InboxIcon sx={{ color: '#fff' }} /> : <MailIcon sx={{ color: '#fff' }} />} */}
-                                    {index === 1 ? <EqualizerIcon sx={{ color: '#fff' }} /> : index === 2 ? <RestaurantMenuIcon sx={{ color: '#fff' }} /> : <BorderColorIcon sx={{ color: '#fff' }} /> }
+                                    {index === 1 ? <EqualizerIcon sx={{ color: '#fff' }} /> : index === 2 ? <RestaurantMenuIcon sx={{ color: '#fff' }} /> : index === 3 ?<LogoutIcon sx={{ color: '#fff' }} /> : <BorderColorIcon sx={{ color: '#fff' }}/>}
                                     {/* {index === 1 ? <img src={order} alt=''></img> : index === 2 ? <img src={chart} alt=''></img> : <img src={menu} alt=''></img>} */}
                                 </ListItemIcon>
                                 <Link to={'/' + direction[index]}>
