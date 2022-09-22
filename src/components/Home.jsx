@@ -16,8 +16,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
-// import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
@@ -73,7 +71,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function PersistentDrawerLeft() {
-    const direction = ['home', 'order', 'chart', 'menu']
+    const direction = ['order', 'chart', 'menu', 'login']
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -121,7 +119,7 @@ export default function PersistentDrawerLeft() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Захиалга', 'График', 'Меню', 'Гарах'].map((text, index) => (
+                    {['Захиалга', 'График', 'Меню', 'Нэвтрэх'].map((text, index) => (
                         <ListItem key={text} disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
@@ -141,12 +139,6 @@ export default function PersistentDrawerLeft() {
             </Drawer>
             <Main open={open}>
                 <DrawerHeader />
-                <Typography paragraph>
-                    hey
-                </Typography>
-                <Typography paragraph>
-                    hii
-                </Typography>
             </Main>
         </Box>
     );

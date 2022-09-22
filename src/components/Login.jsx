@@ -19,13 +19,12 @@ export default function BasicTextFields() {
             marginLeft: "40%",
             // marginTop:"30px"
         }}
-        // noValidate
-        // autoComplete="off"
-        >
+      >
             <TextField id="outlined-basic" label="И-Мэйл" variant="outlined" />
-            <TextField id="filled-basic" label="Утасны дугаар" variant="outlined" />
-            {/* <TextField id="standard-basic" label="Бүртгүүлэх" variant="standard" /> */}
-            <Button id="filled-basic" variant="outlined">Бүртгүүлэх</Button>
+        <TextField id="filled-basic" label="Утасны дугаар" variant="outlined" />
+        <Box>
+            <Button sx={{width: "10vw", marginLeft:"20%"}} id="filled-basic" variant="outlined">Бүртгүүлэх</Button>
+        </Box>
       </Box>
     );
 }
