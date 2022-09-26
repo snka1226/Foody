@@ -9,6 +9,8 @@ import { setDocToFirebase } from '../firebase/setDocToFIrebase';
 import { uploadBytes, ref ,getDownloadURL} from 'firebase/storage';
 import { storage } from '../firebase/firebase';
 import { uploadImageToFirebase } from '../firebase/storage';
+import  Select  from "../components/Select"
+
 export const AddNewFoodModal= (props) => {
   const { isOpenModal, setIsOpenModal } = props.value;
   const [ImageUrl, setImageUrl] = useState();
@@ -59,13 +61,13 @@ export const AddNewFoodModal= (props) => {
         <Box >
           <Typography>Хоолны нэр</Typography>
           <TextField name='foodName' onChange={e=>takeUserInput(e)} sx={{ width: "100%" }} id="outlined-basic" label="Энд бичнэ үү" variant="outlined" />
-          <Typography>Дэлгэрэнгүй</Typography>
+          <Typography sx={{marginTop:"20px"}}>Дэлгэрэнгүй</Typography>
           <TextField name='foodDetails' onChange={e => takeUserInput(e)} sx={{ width: "100%" }} id="outlined-basic" label="Энд бичнэ үү" variant="outlined" />
-        <Box sx={{display:"flex"}}>
+        <Box sx={{display:"flex", marginTop:"50px"}}>
           <Typography>Хоолны үнэ</Typography>
-          <TextField name='foodName' onChange={e=>takeUserInput(e)} sx={{ width: "20%" }} id="outlined-basic" label="Энд бичнэ үү" variant="outlined" />
+          <TextField name='foodName' onChange={e=>takeUserInput(e)} sx={{ width: "20%" }} id="outlined-basic" label="₮ Энд бичнэ үү" variant="outlined" />
           <Typography>Төрөл</Typography>
-          <TextField name='foodDetails' onChange={e=>takeUserInput(e)} sx={{width:"20%"}} id="outlined-basic" label="Энд бичнэ үү" variant="outlined" />
+          <Select/>
         </Box>
           
         </Box>
